@@ -1,0 +1,65 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #29313e;
+}
+
+.kolomInput{
+  position: relative;
+  width: 350px;
+}
+
+.kolomInput input {
+  position: relative;
+  width: 100%;
+  padding: 10px 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #999;
+  color: #fff;
+  letter-spacing: 0.05em;
+  font-size: 1.25em;
+  transition: 0.5s;
+}
+
+.kolomInput label{
+  position: absolute;
+  left: 0;
+  padding: 10px 0;
+  pointer-events: none;
+  color: #666;
+  user-select: none;
+}
+
+.kolomInput label span{
+  position: relative;
+  display: inline-block;
+  flex-direction: row;
+  font-size: 1.25em;
+  letter-spacing: 0.05em;
+  transition: 0.25s cubic-bezier(0.5,1,0.5,1.5);
+}
+
+.kolomInput input:focus ~ label span,
+.kolomInput input:valid ~ label span
+{
+  color: #0f0;
+  text-shadow: 0 0 5px #0f0,
+  0 0 15px #0f0,
+  0 0 30px #0f0;
+  transform: translateY(-30px);
+}
+
+.kolomInput input:focus,
+.kolomInput input:valid{
+  border-bottom: 2px solid #fff;
+}

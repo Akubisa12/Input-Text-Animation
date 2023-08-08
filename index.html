@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input Text Wave Animation On Click using CSS & Javascript</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="kolomInput">
+    <input type="text" required>
+    <label>Wavy&nbsp;Input&nbsp;Animation</label>
+  </div>
+  <script>
+    let label = document.querySelector('label');
+    label.innerHTML= label.innerText.split('').map((letters,i)=>`<span style="transition-delay:${i*30}ms;filter:hue-rotate(${i*10}deg);">${letters}</span>`).join('');
+  </script>
+</body>
+</html>
